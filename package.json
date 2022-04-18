@@ -1,0 +1,21 @@
+{
+  "name": "file-metadata-api",
+  "version": "1.0.0",
+  "description": "Api for FCC backend certification",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "npx nodemon app"
+  },
+  "author": "Diego-EM",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "multer": "^1.4.4"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  }
+}
