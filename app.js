@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(morgan('dev'));
 
-app.set('port', 3000 || process.env.PORT);
+app.set('port', process.env.PORT || 3000);
 
 app.post('/api/fileanalyse', upload,(req, res) => {
     res.json({
@@ -21,7 +21,7 @@ app.post('/api/fileanalyse', upload,(req, res) => {
     })
 })
 
-app.get('/',express.static('./public'));
+app.use('/',express.static('./public'));
 
 app.listen(app.get('port'),()=>{
     console.log(`Server on port ${app.get('port')}`);
